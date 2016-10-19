@@ -8,6 +8,7 @@
 (function (global) {
 
     var pathMappings = {
+        '@angular': 'node_modules/@angular',
         '@rxjs': 'node_modules/@rxjs',
     };
 

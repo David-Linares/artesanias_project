@@ -9,3 +9,8 @@ Instalación de Paquetes
 
 > $ npm install
 
+Correr el proyecto
+==================
+
+> $ lite-server
+
