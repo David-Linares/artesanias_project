@@ -14,11 +14,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.variable = "Esta se supone que es la barra de navegación de la página";
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular App</h1>'
+            templateUrl: 'app/views/header.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

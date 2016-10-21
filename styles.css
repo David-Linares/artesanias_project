@@ -1,4 +1,9 @@
 /* Master Styles */
+*{
+    margin:0;
+    padding:0 ;
+    box-sizing: border-box;
+}
 h1 {
     color: #369;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,6 +14,60 @@ h2, h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
 }
-body {
-    margin: 2em;
+
+header{
+    background: #fff;
+    text-align: center;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    color: #DB3541;
+    border-bottom:solid #DB3541;
+    position: fixed;
+    width: 100%;
+}
+
+header img, header ul{
+    display: inline-block;
+    vertical-align: top;
+}
+
+header img{
+    height: 100% !important;
+}
+
+header ul{
+    /*background: #002E70;*/
+    list-style-type: none;
+    line-height: 100px;
+    width: 60%;
+}
+
+header li{
+    display: inline;
+    text-align: center;
+    padding: 41px 4% 2.6em 3%;
+}
+
+header li:hover{
+    background: #DB3541;
+    color: #fff;
+    cursor: hand;
+}
+
+header li label{
+    font-size: 2em;
+}
+
+header li label, header li i{
+    vertical-align: middle;
+    margin-left:3px;
+}
+
+header li a {
+    padding: 2px 7px 2px 7px;
+    color: #666;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    text-decoration: none;
 }
