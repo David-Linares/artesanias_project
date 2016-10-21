@@ -12,5 +12,5 @@ Instalación de Paquetes
 Correr el proyecto
 ==================
 
-> $ lite-server
+> $ npm start
 
