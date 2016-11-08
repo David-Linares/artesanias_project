@@ -1,5 +1,5 @@
 /**
- * Created by david on 21/10/16.
+ * Created by david on 8/11/16.
  */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -12,22 +12,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var body_component_1 = require('./body.component');
-var header_component_1 = require('./header.component');
-var products_component_1 = require('./products.component');
-var AppModule = (function () {
-    function AppModule() {
+var ProductsComponent = (function () {
+    function ProductsComponent() {
+        this.products = ['Product1', 'Product2', 'Product3'];
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [header_component_1.HeaderComponent, body_component_1.BodyComponent, products_component_1.ProductsComponent],
-            bootstrap: [body_component_1.BodyComponent]
+    ProductsComponent = __decorate([
+        core_1.Component({
+            selector: 'productslist',
+            templateUrl: './app/views/products.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], ProductsComponent);
+    return ProductsComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.ProductsComponent = ProductsComponent;
+//# sourceMappingURL=products.component.js.map

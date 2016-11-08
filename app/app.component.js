@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var products_component_1 = require('./products.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.variable = "Esta se supone que es la barra de navegación de la página";
@@ -19,7 +20,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'app/views/header.html'
+            templateUrl: './app/views/header.html',
+            directives: [products_component_1.ProductsComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

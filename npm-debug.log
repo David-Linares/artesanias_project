@@ -1,55 +1,32 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'angular-cli' ]
-2 info using npm@3.10.7
-3 info using node@v0.10.25
-4 verbose node symlink /usr/bin/node
-5 silly loadCurrentTree Starting
-6 silly install loadCurrentTree
-7 silly install readGlobalPackageData
-8 silly fetchPackageMetaData angular-cli
-9 silly fetchNamedPackageData angular-cli
-10 silly mapToRegistry name angular-cli
-11 silly mapToRegistry using default registry
-12 silly mapToRegistry registry https://registry.npmjs.org/
-13 silly mapToRegistry data { raw: 'angular-cli',
-13 silly mapToRegistry   scope: null,
-13 silly mapToRegistry   escapedName: 'angular-cli',
-13 silly mapToRegistry   name: 'angular-cli',
-13 silly mapToRegistry   rawSpec: '',
-13 silly mapToRegistry   spec: 'latest',
-13 silly mapToRegistry   type: 'tag' }
-14 silly mapToRegistry uri https://registry.npmjs.org/angular-cli
-15 verbose request uri https://registry.npmjs.org/angular-cli
-16 verbose request no auth needed
-17 info attempt registry request try #1 at 14:29:11
-18 verbose request id 421e42d1bd42b17d
-19 http request GET https://registry.npmjs.org/angular-cli
-20 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
-21 info attempt registry request try #2 at 14:29:35
-22 http request GET https://registry.npmjs.org/angular-cli
-23 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
-24 info attempt registry request try #3 at 14:30:45
-25 http request GET https://registry.npmjs.org/angular-cli
-26 silly fetchPackageMetaData Error: getaddrinfo EADDRINFO
-26 silly fetchPackageMetaData     at errnoException (dns.js:37:11)
-26 silly fetchPackageMetaData     at Object.onanswer [as oncomplete] (dns.js:124:16)
-26 silly fetchPackageMetaData  error for angular-cli { [Error: getaddrinfo EADDRINFO] code: 'EADDRINFO', errno: 'EADDRINFO', syscall: 'getaddrinfo' }
-27 silly rollbackFailedOptional Starting
-28 silly rollbackFailedOptional Finishing
-29 silly runTopLevelLifecycles Finishing
-30 silly install printInstalled
-31 verbose stack Error: getaddrinfo EADDRINFO
-31 verbose stack     at errnoException (dns.js:37:11)
-31 verbose stack     at Object.onanswer [as oncomplete] (dns.js:124:16)
-32 verbose cwd /var/www/html/artesanias_front
-33 error Linux 4.2.0-35-generic
-34 error argv "node" "/usr/local/bin/npm" "install" "-g" "angular-cli"
-35 error node v0.10.25
-36 error npm  v3.10.7
-37 error code EADDRINFO
-38 error errno EADDRINFO
-39 error syscall getaddrinfo
-40 error getaddrinfo EADDRINFO
-41 error If you need help, you may report this error at:
-41 error     <https://github.com/npm/npm/issues>
-42 verbose exit [ 1, true ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@3.10.8
+3 info using node@v7.0.0
+4 verbose stack Error: Failed to parse json
+4 verbose stack Trailing comma in object at 11:3
+4 verbose stack   },
+4 verbose stack   ^
+4 verbose stack     at parseError (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:390:11)
+4 verbose stack     at parseJson (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:79:23)
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+4 verbose stack     at tryToString (fs.js:425:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:412:12)
+5 verbose cwd /var/www/html/artesanias_front
+6 error Linux 4.2.0-35-generic
+7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+8 error node v7.0.0
+9 error npm  v3.10.8
+10 error file /var/www/html/artesanias_front/package.json
+11 error code EJSONPARSE
+12 error Failed to parse json
+12 error Trailing comma in object at 11:3
+12 error   },
+12 error   ^
+13 error File: /var/www/html/artesanias_front/package.json
+14 error Failed to parse package.json data.
+14 error package.json must be actual JSON, not just JavaScript.
+14 error
+14 error This is not a bug in npm.
+14 error Tell the package author to fix their package.json file. JSON.parse
+15 verbose exit [ 1, true ]

@@ -14,19 +14,19 @@ h2, h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
 }
-
 header{
+    width: 100%;
     background: #fff;
-    text-align: center;
     height: 100px;
     min-height: 100px;
     max-height: 100px;
     color: #DB3541;
     border-bottom:solid #DB3541;
-    position: fixed;
-    width: 100%;
 }
-
+.container{
+    margin-left: 20%;
+    width: 70%;
+}
 header img, header ul{
     display: inline-block;
     vertical-align: top;
@@ -70,4 +70,35 @@ header li a {
     background-color: #eeeeee;
     border: 1px solid #ccc;
     text-decoration: none;
+}
+.products{
+    margin-top: 40px;
+}
+.product-section{
+    width: 100%;
+    margin: 20px 0px 20px 20px;
+    box-shadow: 0px 0px 32px #d9d9d9;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.product-section .img-container{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+}
+.product-section .info-product {
+    display: inline-block;
+    vertical-align: top;
+    width: 79%;
+}
+.product-section .img-container img{
+    width: 100%;
+}
+.product-section .info-product label{
+    font-size: 19px;
+}
+
+.product-section .info-product .description{
+    text-align: justify;
+    margin:12px;
 }
