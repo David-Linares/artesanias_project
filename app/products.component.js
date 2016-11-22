@@ -12,16 +12,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ProductsComponent = (function () {
-    function ProductsComponent() {
-        this.products = ['Product1', 'Product2', 'Product3'];
+var products_service_1 = require('./products.service');
+var Product = (function () {
+    function Product() {
     }
+    return Product;
+}());
+exports.Product = Product;
+var ProductsComponent = (function () {
+    function ProductsComponent(productService) {
+        this.productService = productService;
+    }
+    ProductsComponent.prototype.getProducts = function () {
+        var _this = this;
+        this.productService.getProducts().subscribe(function (products) { return _this.products = products; }, //Bind to view
+        function (//Bind to view
+            err) {
+            // Log errors if any
+            console.log(err);
+        });
+    };
+    ProductsComponent.prototype.ngOnInit = function () {
+        this.getProducts();
+    };
     ProductsComponent = __decorate([
         core_1.Component({
-            selector: 'productslist',
-            templateUrl: './app/views/products.html'
+            templateUrl: './app/views/products.html',
+            providers: [products_service_1.ProductServices]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [products_service_1.ProductServices])
     ], ProductsComponent);
     return ProductsComponent;
 }());

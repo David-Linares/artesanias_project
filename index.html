@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
@@ -17,9 +17,14 @@
     <script>
         System.import('app').catch(function(err){ console.error(err); });
     </script>
+    <link rel="stylesheet" href="node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-material-design/dist/css/ripples.min.css">
+    <base href="/">
 </head>
 <!-- 3. Display the application -->
 <body>
-<app-body></app-body>
+<app-body>
+    <h3>Cargando...</h3>
+</app-body>
 </body>
 </html>

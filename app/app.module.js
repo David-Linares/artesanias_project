@@ -13,16 +13,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var http_1 = require('@angular/http');
+var router_1 = require('@angular/router');
 var body_component_1 = require('./body.component');
 var header_component_1 = require('./header.component');
 var products_component_1 = require('./products.component');
+var compra_component_1 = require("./compra.component");
+var forms_1 = require("@angular/forms");
+var common_1 = require("@angular/common");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [header_component_1.HeaderComponent, body_component_1.BodyComponent, products_component_1.ProductsComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, http_1.JsonpModule, router_1.RouterModule.forRoot([
+                    { path: '', redirectTo: '/productos', pathMatch: 'full' },
+                    { path: 'productos', component: products_component_1.ProductsComponent },
+                    { path: 'compra/:id', component: compra_component_1.CompraComponent }
+                ]), forms_1.FormsModule],
+            declarations: [body_component_1.BodyComponent, header_component_1.HeaderComponent, products_component_1.ProductsComponent, compra_component_1.CompraComponent],
+            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
             bootstrap: [body_component_1.BodyComponent]
         }), 
         __metadata('design:paramtypes', [])

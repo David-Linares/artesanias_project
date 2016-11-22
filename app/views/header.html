@@ -1,24 +1,36 @@
-<header>
-    <div class="container">
-
-        <img src="../images/logo.JPG"/>
-        <ul>
-            <li>
-                <i class="material-icons" style="font-size:2em;">home</i>
-                <label>Inicio</label>
-            </li>
-            <li>
-                <i class="material-icons">work</i>
-                <label>Productos</label>
-            </li>
-            <li>
-                <i class="material-icons" style="font-size:2em;">home</i>
-                <label>Conozcanos</label>
-            </li>
-            <li>
-                <i class="material-icons" style="font-size:2em;margin-right: 30px">local_grocery_store</i>
-                <i class="material-icons" style="font-size:2em;">person</i>
-            </li>
-        </ul>
+<div class="navbar navbar-danger">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"><img src="../images/logo.JPG" height="200%"/></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/productos" routerLinkActive="active">Productos</a></li>
+                <!--<li><a href="javascript:void(0)">Link</a></li>
+                <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Productos</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                        <li><a href="javascript:void(0)">One more separated link</a></li>
+                    </ul>
+                </li>-->
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control col-md-8" placeholder="Search">
+                </div>
+            </form>
+        </div>
     </div>
-</header>
+</div>

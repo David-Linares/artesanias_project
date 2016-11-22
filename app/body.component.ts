@@ -9,7 +9,6 @@ import { HeaderComponent } from './header.component';
 @Component({
     selector: 'app-body',
     templateUrl: './app/views/body.html',
-    directives: [HeaderComponent, ProductsComponent]
 })
 
 export class BodyComponent {

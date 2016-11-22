@@ -1,0 +1,58 @@
+<div class="col-md-12" *ngIf="product">
+    <div class="col-md-4">
+        <img src="http://www.lacalenita.com/images/gallery/C22012%20Sombrero%20Vueltiao%20%2021%20Vueltas.png"
+             width="100%">
+    </div>
+    <div class="col-md-8">
+        <form action="" class="form-horizontal">
+            <input type="hidden" name="merchantId" id="merchantId" [(ngModel)]="merchantid">
+            <input type="hidden" name="ApiKey" id="apikey" [(ngModel)]="apikey">
+            <input type="hidden" name="referenceCode" [(ngModel)]="referencecode" id="referencecode">
+            <input type="hidden" name="accountId" id="accountid" [(ngModel)]="accountid">
+            <input type="hidden" name="description" value="Test PAYU">
+            <input type="hidden" name="tax" value="0">
+            <input type="hidden" name="taxReturnBase" value="0">
+            <input type="hidden" name="currency"[(ngModel)]="currency" id="currency">
+            {{apikey + '~' + merchantid + '~' + referencecode + '~' + product.price * product.cantidad + '~' + currency}}
+            <input type="text" name="signature" id="signature" [(ngModel)]="apikey + '~' + merchantid + '~' + referencecode + '~' + product.price * product.cantidad + '~' + currency">
+            <input type="hidden" name="test" value="1">
+            <input type="hidden" name="buyerEmail" value="linaresvillamil.davidalexander@gmail.com">
+            <input type="hidden" name="responseUrl" value="http://localhost:3001/productos">
+            <input type="hidden" name="confirmationUrl" value="http://2d681e2e.ngrok.io/shopping/payu">
+            <div class="col-sm-12"><h2>{{product.name}}</h2></div>
+            <div class="col-sm-12">
+                <p>
+                    {{product.description}}
+                </p>
+            </div>
+            <div class="form-group">
+                <h3 class="col-md-2 control-label" for="cantidad">Disponible: </h3>
+                <div class="col-md-10">
+                    <h3 class="col-md-2 control-label" for="cantidad">{{product.stock}}</h3>
+                </div>
+            </div>
+            <div class="form-group">
+                <h3 class="col-md-2 control-label" for="cantidad">Cantidad</h3>
+                <div class="col-md-10">
+                    <input type="text" required [(ngModel)]="product.cantidad" id="cantidad" class="form-control" name="cantidad" placeholder="Cantidad">
+                </div>
+            </div>
+            <div class="form-group">
+                <h6 class="col-md-2 control-label" for="cantidad">Precio por Unidad</h6>
+                <div class="col-md-10">
+                    <h3>{{product.price | currency:'COP'}}</h3>
+                </div>
+            </div>
+            <div class="form-group">
+                <h6 class="col-md-2 control-label" for="cantidad">Total a Pagar</h6>
+                <div class="col-md-10">
+                    <input type="hidden" [(ngModel)]="product.price * product.cantidad" name="amount">
+                    <h3>{{((product.price * product.cantidad) || 0) | currency:'COP'}}</h3>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button class="col-md-9 btn btn-raised btn-success">Comprar</button>
+            </div>
+        </form>
+    </div>
+</div>
